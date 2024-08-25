@@ -1,0 +1,131 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Anomalies</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+</head>
+
+<nav>
+    <a href="{{ url_for('home') }}">Mushroom Prediction</a> |
+    <a href="{{ url_for('predict_price') }}">Price Prediction</a> |
+    <a href="{{ url_for('predict_anomaly') }}">Price Prediction</a>
+  </nav>
+
+<body>
+    <div class="container">
+        
+        <h1>Predict Anomalies</h1>
+        <form action="{{ url_for('predict_anomaly')}}" method="post">
+            <div class="form-container">
+            <label for="FISCAL_YR">Fiscal Year:</label>
+            <input type="number" id="FISCAL_YR" name="FISCAL_YR" required>
+
+            <label for="FISCAL_MTH">Fiscal Month:</label>
+            <input type="number" id="FISCAL_MTH" name="FISCAL_MTH" required>
+
+            <label for="DIV_NAME">Division Name:</label>
+            <input type="text" id="DIV_NAME" name="DIV_NAME" required>
+
+            <label for="MERCHANT">Merchant:</label>
+            <input type="text" id="MERCHANT" name="MERCHANT" required>
+
+            <label for="CAT_DESC">Category Description:</label>
+            <input type="text" id="CAT_DESC" name="CAT_DESC" required>
+
+            <label for="AMT">Amount:</label>
+            <input type="float" id="AMT" name="AMT" required>
+
+            <label for="Year">Year:</label>
+            <input type="number" id="Year" name="Year" required>
+
+            <label for="Month">Month:</label>
+            <input type="number" id="Month" name="Month" required>
+
+            <label for="DayOfWeek">Day of Week:</label>
+            <input type="number" id="DayOfWeek" name="DayOfWeek" required>
+
+            <label for="FiscalQuarter">Fiscal Quarter:</label>
+            <input type="number" id="FiscalQuarter" name="FiscalQuarter" required>
+
+            <input type="submit" value="Predict">
+        </div>
+        </form>
+        
+    {{ pred2 }}
+        
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Mushroom Class</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./styles2.css') }}">
+</head>
+<nav>
+  <a href="{{ url_for('home') }}">Mushroom Prediction</a>
+  <a href="{{ url_for('predict_price') }}">Price Prediction</a>
+  <a href="{{ url_for('predict_anomaly') }}">Transaction Anomaly Detection</a>
+</nav>
+
+<body>
+  <div class="login">
+    <h1>Predict Anomaly</h1>
+
+    <!-- Form to enter new data for predictions -->
+    <form action="{{ url_for('predict_anomaly')}}" method="POST">
+      <div class="form-container">
+        <label for="FISCAL_YR">Fiscal Year:</label>
+            <input type="number" id="FISCAL_YR" name="FISCAL_YR" required>
+
+            <label for="FISCAL_MTH">Fiscal Month:</label>
+            <input type="number" id="FISCAL_MTH" name="FISCAL_MTH" required>
+
+            <label for="DIV_NAME">Division Name:</label>
+            <input type="text" id="DIV_NAME" name="DIV_NAME" required>
+
+            <label for="MERCHANT">Merchant:</label>
+            <input type="text" id="MERCHANT" name="MERCHANT" required>
+
+            <label for="CAT_DESC">Category Description:</label>
+            <input type="text" id="CAT_DESC" name="CAT_DESC" required>
+
+            <label for="AMT">Amount:</label>
+            <input type="float" id="AMT" name="AMT" required>
+
+            <label for="Year">Year:</label>
+            <input type="number" id="Year" name="Year" required>
+
+            <label for="Month">Month:</label>
+            <input type="number" id="Month" name="Month" required>
+
+            <label for="DayOfWeek">Day of Week:</label>
+            <input type="number" id="DayOfWeek" name="DayOfWeek" required>
+
+            <label for="FiscalQuarter">Fiscal Quarter:</label>
+            <input type="number" id="FiscalQuarter" name="FiscalQuarter" required>
+
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br><br>
+
+  </div>
+  {{pred2}}
+
+</body>
+</html>
