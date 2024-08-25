@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Mushroom Class</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+</head>
+
+<nav>
+  <a href="{{ url_for('home') }}">Mushroom Prediction</a>
+  <a href="{{ url_for('predict_price') }}">Price Prediction</a>
+  <a href="{{ url_for('predict_anomaly') }}">Transaction Anomaly Detection</a>
+</nav>
+<body>
+  <div class="login">
+    <h1>Predict Mushroom Class</h1>
+
+    <!-- Form to enter new data for predictions -->
+    <form action="{{ url_for('predict_mushroom')}}" method="POST">
+      <!-- <div class="form-container">
+        <input type="text" name="cap-shape" placeholder="Cap Shape" required="required" /><br>
+        <input type="text" name="cap-surface" placeholder="Cap Surface" required="required" /><br>
+        <input type="text" name="cap-color" placeholder="Cap Color" required="required" /><br>
+        <input type="text" name="bruises" placeholder="Bruises" required="required" /><br>
+        <input type="text" name="odor" placeholder="Odor" required="required" /><br>
+        <input type="text" name="gill-attachment" placeholder="Gill Attachment" required="required" /><br>
+        <input type="text" name="gill-spacing" placeholder="Gill Spacing" required="required" /><br>
+        <input type="text" name="gill-size" placeholder="Gill Size" required="required" /><br>
+        <input type="text" name="gill-color" placeholder="Gill Color" required="required" /><br>
+        <input type="text" name="stalk-shape" placeholder="Stalk Shape" required="required" /><br>
+        <input type="text" name="stalk-root" placeholder="Stalk Root" required="required" /><br>
+        <input type="text" name="stalk-surface-above-ring" placeholder="Stalk Surface Above Ring" required="required" /><br>
+        <input type="text" name="stalk-surface-below-ring" placeholder="Stalk Surface Below Ring" required="required" /><br>
+        <input type="text" name="stalk-color-above-ring" placeholder="Stalk Color Above Ring" required="required" /><br>
+        <input type="text" name="stalk-color-below-ring" placeholder="Stalk Color Below Ring" required="required" /><br>
+        <input type="text" name="veil-type" placeholder="Veil Type" required="required" /><br>
+        <input type="text" name="veil-color" placeholder="Veil Color" required="required" /><br>
+        <input type="text" name="ring-number" placeholder="Ring Number" required="required" /><br>
+        <input type="text" name="ring-type" placeholder="Ring Type" required="required" /><br>
+        <input type="text" name="spore-print-color" placeholder="Spore Print Color" required="required" /><br>
+        <input type="text" name="population" placeholder="Population" required="required" /><br>
+        <input type="text" name="habitat" placeholder="Habitat" required="required" /><br>
+      </div> -->
+      <div class="form-container">
+        <input type="text" name="odor" placeholder="Odor" required="required" /><br>
+        <input type="text" name="gill-size" placeholder="Gill Size" required="required" /><br>
+        <input type="text" name="gill-color" placeholder="Gill Color" required="required" /><br>
+        <input type="text" name="cap-color" placeholder="Cap Color" required="required" /><br>
+        <input type="text" name="bruises" placeholder="Bruises" required="required" /><br>
+        <input type="text" name="spore-print-color" placeholder="Spore Print Color" required="required" /><br>
+        <input type="text" name="gill-spacing" placeholder="Gill Spacing" required="required" /><br>
+        <input type="text" name="ring-type" placeholder="Ring Type" required="required" /><br>
+        <input type="text" name="stalk-surface-above-ring" placeholder="Stalk Surface Above Ring" required="required" /><br>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br><br>
+
+  </div>
+  {{pred1}}
+
+</body>
+</html>
