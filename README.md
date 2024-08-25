@@ -11,6 +11,6 @@ URL for integrated model: https://integrated-deployment.onrender.com/predict_ano
 # Individual deployment
 URL for mushroom classification - Lee Yu Liang Asher: https://model-deployment-w1q2.onrender.com/
 
-URL for anomaly detection - Jerrod Ow:
+URL for anomaly detection - Jerrod Ow: https://mlops-assignment-ue7s.onrender.com/
 
-URL for price detection - Cheah Shing Hak:
+URL for price detection - Cheah Shing Hak: https://model-deployment-1vef.onrender.com
